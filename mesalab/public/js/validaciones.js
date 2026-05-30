@@ -20,13 +20,13 @@ function validarFormulario() {
 
 function validarLogin() {
     const usuario = document.getElementById('usuario').value.trim();
-    const password = document.getElementById('password').value.trim();
+    const contrasena = document.getElementById('contrasena').value.trim();
 
     if (usuario === '') {
         alert('El usuario es obligatorio.');
         return false;
     }
-    if (password === '') {
+    if (contrasena === '') {
         alert('La contraseña es obligatoria.');
         return false;
     }
