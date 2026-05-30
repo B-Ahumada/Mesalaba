@@ -4,7 +4,7 @@ const path = require("path");
 const {
   obtenerSolicitudes,
   crearSolicitud
-} = require("./controllers/solicitudesController");
+} = require("");
 
 const app = express();
 const PORT = 3000;
@@ -12,7 +12,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "Evaluacion")));
+app.use(express.static(path.join(__dirname, "database")));
 
 
 app.get("/api/solicitudes", async (req, res) => {
