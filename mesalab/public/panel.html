@@ -11,16 +11,49 @@
             <h1>Panel de Control</h1>
         </header>
         <main>
-            <form>
-                <label for="">Ingresa el titulo:</label>
-                <input type="text" id="opcion1" name="opcion1">
+            <form id="solicitudform">
+                <div>
+                    <label for="titulo">Nombre de la solicitud:</label>
+                    <input type="text" id="titulo" name="titulo" oninput="validarFormulario()" required>
+                </div>
                 <br>
-                <label for="opcion2">Opción 2:</label>
-                <input type="text" id="opcion2" name="opcion2">
+                <div>
+                    <label for="descripcion">Ingrese la descripción:</label>
+                    <input type="text" id="descripcion" name="descripcion" oninput="validarFormulario()" required>
+                </div>  
                 <br>
-                <button type="submit">Guardar Cambios</button>
+                <div>
+                    <label for="prioridad">Seleccione el grado de su prioridad:</label>
+                    <select id="prioridad" name="prioridad" oninput="validarFormulario()" required>
+                        <option value="baja">Baja</option>
+                        <option value="media">Media</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
             </form>
         </main>
     </section>
+    <section>
+        <header>
+            <h1>Solicitudes Enviadas</h1>
+        </header>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre de la solicitud</th>
+                        <th>Descripción</th>
+                        <th>Prioridad</th>
+                    </tr>
+                </thead>
+                <tbody id="solicitudes">
+                    <!-- Aquí se agregarán las solicitudes enviadas -->
+                </tbody>
+            </table>
+        </main>
 </body>
+<script src="js/validaciones.js"></script>
 </html>

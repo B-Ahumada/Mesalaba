@@ -6,15 +6,20 @@
     <title>Mesalab</title>
 </head>
 <body>
+    <header>
     <h1>Iniciar Sesión</h1>
-    <form action="login" method="post">
-        <label for="correo">Correo:</label>
-        <input type="email" id="correo" name="correo" required>
-        <br>
-        <label for="clave">Contraseña:</label>
-        <input type="password" id="clave" name="clave" required>
-        <br>
-        <button type="submit">Iniciar Sesión</button>
-    </form>
+    </header>
+            <main>
+                <form action="login" method="post" onsubmit="return validarLogin()">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+                <br>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <br>
+                <button type="submit">Iniciar Sesión</button>
+                </form>
+            </main>
 </body>
+<script src="js/validaciones.js"></script>
 </html>
